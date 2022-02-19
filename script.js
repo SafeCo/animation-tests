@@ -1,42 +1,43 @@
-const fourthC = document.querySelector('.circle');
-const fourthpos= fourthC.getBoundingClientRect();
+const circle = document.querySelector('.circle');
 const pause= document.querySelector('.pause')
 const come = document.querySelector('.come')
+const remove = document.querySelector('.remove')
 const r = document.querySelector(':root');
 
 
 
 pause.addEventListener("click", function(){
-    
-    fourthC.style.animationPlayState = 'paused'
-    console.log(fourthpos)
-    fourthC.style.top = fourthpos.top+'px'
-    // fourthC.style.bottom = fourthpos.bottom+'px'
-    fourthC.style.left = fourthpos.left+'px'
-    // fourthC.style.right = fourthpos.right+'px'
-
-    console.log(fourthC.style.top)
-    console.log(fourthC.style.left)
-
-
-    r.style.setProperty('--fourth-circle-top', fourthC.style.top);
-    r.style.setProperty('--fourth-circle-left', fourthC.style.left);
-    
-    console.log(fourthC.style)
+    circle.style.animationPlayState = 'paused'    
+    let position = circle.getBoundingClientRect()
+    console.log('when paused')
+    console.log(position)
 })
+
+remove.addEventListener('click', function(){
+    let position = circle.getBoundingClientRect()
+    r.style.setProperty('--circle-top', position.top+'px');
+    r.style.setProperty('--circle-left', position.left+'px');
+    circle.style.animation = 'none'
+    console.log('when animation removed')
+    console.log(position)
+})
+
+
+
 
 come.addEventListener('click', function(){
-    // console.log(come.getBoundingClientRect())
-    fourthC.style.animation = 'come 10s linear infinite'
-    console.log(fourthC.style)
+    let cposition = come.getBoundingClientRect()
+    let position = circle.getBoundingClientRect()
+    console.log('when animation come intialised first is button, second is circle')
+    console.log(cposition)
+    console.log(position)
+    r.style.setProperty('--come-top', cposition.top+'px');
+    r.style.setProperty('--come-left', cposition.left+'px');
+    circle.style.animation = 'come 3s linear infinite'
+    console.log('when animation come executed firs is button, second is circle')
+    console.log(cposition)
+    console.log(position)
 
 })
 
 
-
-// console.log(fourthC.getBoundingClientRect())
-
-// const interval = setInterval(()=> {
-//     console.log(fourthC.getBoundingClientRect())
-//   },0);
-// console.log(fourthC.getBoundingClientRect())
