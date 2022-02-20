@@ -20,14 +20,14 @@ button{
     border: solid black 1px;
 }
 
-.test{
-    position: absolute;
+.button-container{
     border: solid black 1px;
-    background-color: red;
-    top: var(--circle-top);
-    left: var(--circle-left);
-    height: 50px;
-    width: 50px;
+    width: 1000px;
+    height: 500px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
 }
 
 .circle{
@@ -39,38 +39,45 @@ button{
     opacity: 0.2;
     height: 100px;
     width: 100px;
-    animation: animate 20s linear infinite;
+    transform: translate(-50%, -50%);
+    animation: animate 10s linear infinite;
 
+}
+
+.dot{
+    border: solid black 2px;
+    border-radius: 50%;
+    height: 10px;
+    width: 10px;
 }
 
 @keyframes animate {
     0%{
-        transform: translateX(0);
+        transform: translate(-50%, -50%) translateX(0);
     }
 
     100%{
-        transform: translateX(500px);
+        transform: translate(-50%, -50%) translateX(500px);
     }
     
 }
-/* 
-@keyframes come {
-    0%{
-        transform: translateX(0) translateY(0);
-    }
-    50%{
-        transform: translateX(calc(var(--come-top)/2)) translateY(calc(var(--come-left)/2));
-    }
-    100%{
-        transform: translateX(var(--come-top)) translateY(var(--come-left));
-    }
-} */
 
 @keyframes come {
     0%{
-        transform: translateX(var(--circle-top)) translateY(var(--circle-left));
+        transform:translate(-50%, -50%) translateX(0) translateY(0);
     }
     100%{
-        transform: translateX(var(--come-top)) translateY(var(--come-left));
+        transform:translate(-50%, -50%) translateX(var(--come-top)) translateY(var(--come-left));
     }
 }
+
+/* @keyframes come {
+    0%{
+        transform: translate3d(0,0,0);
+    }
+    100%{
+        transform: translate3d(var(--come-top), var(--come-left),0);
+    }
+} */
+
+
