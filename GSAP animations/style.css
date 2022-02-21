@@ -1,0 +1,38 @@
+*, *:before, *:after{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+
+
+button{
+    border: solid black 1px;
+    height: 70px;
+    width: 100px;
+}
+
+.button-container{
+    border: solid black 1px;
+    width: 1000px;
+    height: 500px;
+    display: flex;
+    justify-content: center;
+    
+}
+
+
+.circle{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    height: 100px;
+    width: 100px;
+    transform: translate(-50%, -50%);
+
+}
+
+
+svg{
+    transform: scale(1.5);
+}

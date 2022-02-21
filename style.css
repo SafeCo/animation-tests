@@ -34,9 +34,7 @@ button{
     position: absolute;
     top: var(--circle-top);
     left: var(--circle-left);
-    border: solid black 2px;
-    background-color: green;
-    opacity: 0.2;
+    
     height: 100px;
     width: 100px;
     transform: translate(-50%, -50%);
