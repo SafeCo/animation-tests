@@ -3,36 +3,31 @@
     margin: 0;
     padding: 0;
 }
-
-
-
-button{
-    border: solid black 1px;
-    height: 70px;
-    width: 100px;
-}
-
-.button-container{
-    border: solid black 1px;
-    width: 1000px;
-    height: 500px;
-    display: flex;
-    justify-content: center;
-    
+body{
+    overflow-x: hidden;
+    overflow-y: hidden;
 }
 
 
-.circle{
+#test{
     position: absolute;
     top: 50%;
     left: 50%;
-    height: 100px;
-    width: 100px;
+    min-width: 200px;
+    max-width: 500px;
     transform: translate(-50%, -50%);
 
 }
 
-
-svg{
-    transform: scale(1.5);
+.orb{
+    transform: scale(0.5);
+    
 }
+
+.orb-position{
+    position: absolute;
+    border: solid black 1px;
+    
+}
+
+
