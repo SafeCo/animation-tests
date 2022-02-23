@@ -8,25 +8,38 @@ body{
     overflow-y: hidden;
 }
 
+.dot{
+    position: absolute;
+    border: solid red 1px;
+    height: 1em;
+    width: 1em;
+    transform: translate(-50%, -50%);
+    left:  466.2764650159637px ;
+    top: 466.2764650159637px;
+}
 
-#test{
+#path-view{
+    border: solid black 1px;
     position: absolute;
     top: 50%;
-    left: 50%;
+    left:50%;
     min-width: 200px;
     max-width: 500px;
     transform: translate(-50%, -50%);
 
 }
 
+
 .orb{
     transform: scale(0.5);
-    
+    opacity: 0.5;
 }
 
-.orb-position{
+.orb-container{
     position: absolute;
     border: solid black 1px;
+    /* top: -100%;
+    left: -10%; */
     
 }
 
