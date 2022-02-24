@@ -6,17 +6,9 @@
 body{
     overflow-x: hidden;
     overflow-y: hidden;
+    background-color: black;
 }
 
-.dot{
-    position: absolute;
-    border: solid red 1px;
-    height: 1em;
-    width: 1em;
-    transform: translate(-50%, -50%);
-    left:  466.2764650159637px ;
-    top: 466.2764650159637px;
-}
 
 #path-view{
     border: solid black 1px;
@@ -32,15 +24,27 @@ body{
 
 .orb{
     transform: scale(0.5);
-    opacity: 0.5;
+    opacity: 1;
+    z-index: 10;
 }
 
 .orb-container{
     position: absolute;
     border: solid black 1px;
-    /* top: -100%;
-    left: -10%; */
+    top: -100%;
+    left: -10%;
     
 }
 
 
+.magic{
+
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) scale(0.65);
+    
+}
+.magic-text{
+    transform: translate(-50%, -50%) scale(0.67);
+}
