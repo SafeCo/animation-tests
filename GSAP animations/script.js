@@ -1,20 +1,37 @@
+const animationContainer = document.querySelector('.animation-container')
 const orbContainer = document.querySelector('.orb-container')
-const orbOne = document.querySelector('.one')
-const orbTwo = document.querySelector('.two')
 const path = document.querySelector('#path')
-const pathView = document.querySelector('#path-view')
+const magicText = document.querySelector('.magic-text')
+const magicCircle = document.querySelector('.magic-circle')
+
+let executed = false
+
+const body = document.querySelector('body')
+
+const intro = document.querySelector('.front-end')
+
+const whiteBall = document.querySelector('.white-ball')
+const blueBall = document.querySelector('.blue-ball')
+
 
 
 //                                                                  MAGIC ORB
+const tl = gsap.timeline();
 
-let p =MotionPathPlugin.getRelativePosition(orbOne, pathView, [0.5, 0.5],{x:110,y:5})
+tl.set(magicCircle,{autoAlpha:0});
+tl.set(whiteBall, {autoAlpha:0});
+tl.set(blueBall, {autoAlpha:0});
+tl.set(intro,{autoAlpha:0})
 
-const tl = gsap.timeline({repeat:1});
+
 
 let rawPath = MotionPathPlugin.getRawPath("#path"),
     pl;
 MotionPathPlugin.cacheRawPathMeasurements(rawPath);
 
+const secondTl= gsap.timeline();
+
+tl.add(secondTl)
 
 
 for(i = 0; i < orbContainer.children.length; i++){
@@ -31,95 +48,112 @@ for(i = 0; i < orbContainer.children.length; i++){
     y:p.y - bbox.y
   })
 
-  tl.to(orb, {
+  secondTl.to(orb, {
     x: "+=" + rl.x, 
     y: "+=" + rl.y,
-    duration: 4,
+    duration: 3,
     ease: "power1.inOut"
   }, 0);
 
-
-
-  tl.to(orb, {
-      duration: 5, 
-      repeat: 5,
+  secondTl.to(orb, {
+      duration:10,
+      repeat: -1,
+      onsStart: function(){fastSpin()},
       ease: "linear",
       motionPath:{
         start: orbPathPositions[i][0],
         end: orbPathPositions[i][1],
+        ease: "power1.easeIn",
         path: "#path",
         align: "#path",
         alignOrigin: [0.5, 0.5]
       }
     },"allspin");
+
+    function fastSpin (){
+
+      if(executed == false && i == 5){
+        const speed = gsap.timeline()
+        speed.fromTo(secondTl,{timeScale:1},{timeScale:5, ease:"Power1.easeInOut", duration:12, onEnd:function(){console.log("working3")}})
+        speed.to(secondTl,{timeScale:1, ease:"Power1.easeOut", duration: 10, onStart: function(){console.log('stopped')}})
+        executed = true
+      }
+    }
+    
 }
+
+
+tl.call(testone, [0],"<+=10")
+tl.call(testtwo, [1],"<")
+tl.call(testthree, [2],"<")
+tl.call(testfour, [3],"<")
+tl.to(magicCircle,{autoAlpha:1},"<+=0.1")
 
 
 //                                                                  MAGIC CIRCLE
 
 
 
-const origPrevious = document.querySelector('.magic-circle')
-
-var orig = origPrevious.querySelectorAll('path'), length, timer;
-
-console.log(orig.length)
 
 
-testone(0)
-testtwo(1)
-testthree(2)
-testfour(3)
+const circlePath = magicCircle.querySelectorAll('path')
 
-
-
-
-
-function testone (an){
+function testone (num){
   let obj = {length:0,
-            pathLength: orig[an].getTotalLength()};
+            pathLength: circlePath[num].getTotalLength()};
 
-
-  let t = gsap.to(obj, {duration: 10, length:obj.pathLength, onUpdate:drawLine, ease:"none"})
+  gsap.to(obj, {duration: 5, length:obj.pathLength, onUpdate:drawLine, ease:"none", onComplete: function(){replaceCircle()}})
 
   function drawLine() {
-    orig[an].style.strokeDasharray = [obj.length,obj.pathLength].join(' ');
+    circlePath[num].style.strokeDasharray = [obj.length,obj.pathLength].join(' ');
   }
 }
 
+function replaceCircle (){
+  const animationParetNode = magicCircle.parentNode
+  
+  let img = document.createElement('img');
+  img.src = 
+  "./MCSVG/Magic Circle No Text.svg";
+  img.classList.add("centre", "magic-circle");
+  animationParetNode.insertBefore(img, magicText);
+  magicCircle.remove();
+}
+
+
 function testtwo (an){
   let obj = {length:0,
-    pathLength: orig[an].getTotalLength()};
+    pathLength: circlePath[an].getTotalLength()};
 
 
-let t = gsap.to(obj, {duration: 10, length:obj.pathLength, onUpdate:drawLine, ease:"none"})
+let t = gsap.to(obj, {duration: 5, length:obj.pathLength, onUpdate:drawLine, ease:"none"})
 
 function drawLine() {
-orig[an].style.strokeDasharray = [obj.length,obj.pathLength].join(' ');
+  circlePath[an].style.strokeDasharray = [obj.length,obj.pathLength].join(' ');
   }
 }
 
 function testthree (an){
   let obj = {length:0,
-    pathLength: orig[an].getTotalLength()};
+    pathLength: circlePath[an].getTotalLength()};
 
 
-let t = gsap.to(obj, {duration: 10, length:obj.pathLength, onUpdate:drawLine, ease:"none"})
+let t = gsap.to(obj, {duration: 5, length:obj.pathLength, onUpdate:drawLine, ease:"none"})
 
 function drawLine() {
-orig[an].style.strokeDasharray = [obj.length,obj.pathLength].join(' ');
+  circlePath[an].style.strokeDasharray = [obj.length,obj.pathLength].join(' ');
   }
 }
 
 function testfour (an){
   let obj = {length:0,
-    pathLength: orig[an].getTotalLength()};
+    pathLength: circlePath[an].getTotalLength()};
 
 
-let t = gsap.to(obj, {duration: 10, length:obj.pathLength, onUpdate:drawLine, ease:"none"})
+let t = gsap.to(obj, {duration: 5, length:obj.pathLength, onUpdate:drawLine, ease:"none"})
 
 function drawLine() {
-orig[an].style.strokeDasharray = [obj.length,obj.pathLength].join(' ');
+  circlePath[an].style.strokeDasharray = [obj.length,obj.pathLength].join(' ');
   }
 }
 
@@ -128,31 +162,34 @@ orig[an].style.strokeDasharray = [obj.length,obj.pathLength].join(' ');
 
 
 
-const magicText = document.querySelector('.magic-text')
-gsap.fromTo(magicText,{opacity:0}, {rotation:90, duration:12, opacity: 1})
+
+tl.fromTo(magicText,{autoAlpha:0}, {duration:12, autoAlpha:1},"<+=3")
+tl.to(magicText, {rotation:360, duration:36, repeat: -1, ease: "linear"},"<+=1")
 
 
 //                                                                  MAGIC BALL
 
+const textTl = gsap.timeline()
 
 
-const whiteBall = document.querySelector('.white-ball')
-const blueBall = document.querySelector('.blue-ball')
+tl.set(whiteBall, {autoAlpha:1},"<")
+  .set(blueBall, {autoAlpha:1},"<")
+  .fromTo(whiteBall, {scale:0.1}, {scale:0.15, duration:1, repeat: 3, yoyo:true},"<" )
+  .fromTo(blueBall, {scale:0.1}, {scale: 0.2, duration:1, repeat: 3, yoyo:true},"<" )
+  .fromTo(whiteBall, {scale:0.15}, {scale:0.5,duration:3, repeat: 3, yoyo:true},">" )
+  .fromTo(blueBall, {scale:0.2}, {scale: 0.4, duration:3, repeat: 3, yoyo:true},"<"  )
+  .add(textTl)
+  .fromTo(whiteBall, {scale:0.15}, {scale:0.3, duration:1, repeat: 3, yoyo:true},">" )
+  .fromTo(blueBall, {scale:0.2}, {scale: 0.3,duration:1,  repeat: 3, yoyo:true},"<")
+  .fromTo(whiteBall,1, {scale:0.15}, {scale:0.21,duration:1,  repeat: -1, yoyo:true},">" )
+  .fromTo(blueBall, {scale:0.2}, {scale: 0.22,duration:1,  repeat: -1, yoyo:true},"<")
+
+  //                                                                  MY NAME IS SAIF A FRONTEND WEB DEVLEOPER
+  
+
+  textTl.to(animationContainer,{scale:0.5, y:-150,x: 300, duration: 5, ease: "power1.InOut"})
+        .to(intro, {autoAlpha:1, scale:1} ,"<")
+        .to(intro, { y:-150,x:-600, ease:"bounce.out", duration: 3} ,"<")
 
 
-
-const magicBallTl = gsap.timeline()
-
-// magicBallTl.staggerFromTo(whiteBall, 0.5, {scale:0}, {scale:0.5, repeat:-1, yoyo:true}, 0.1);
-// magicBallTl.staggerFromTo(blueBall, 0.5, {scale:0}, {scale:0.5, repeat:-1, yoyo:true}, 0.1);
-
-
-magicBallTl.fromTo(whiteBall,0.7, {scale:0.1}, {scale:0.15, repeat: 5, yoyo:true},"smallState" )
-          .fromTo(blueBall,0.7, {scale:0.1}, {scale: 0.2, repeat: 5, yoyo:true},"smallState" )
-          .fromTo(whiteBall,1, {scale:0.15}, {scale:0.5, repeat: 5, yoyo:true},"mediumState" )
-          .fromTo(blueBall,1, {scale:0.2}, {scale: 0.4, repeat: 5, yoyo:true},"mediumState"  )
-          .fromTo(whiteBall,1, {scale:0.15}, {scale:0.3, repeat: 3, yoyo:true},"bigState" )
-          .fromTo(blueBall,1, {scale:0.2}, {scale: 0.3, repeat: 3, yoyo:true},"bigState")
-          .fromTo(whiteBall,1, {scale:0.15}, {scale:0.22},"stablingState" )
-          .fromTo(whiteBall,1, {scale:0.22}, {scale:0.23, repeat: -1, yoyo:true},"stableState" )
-          .fromTo(blueBall,1, {scale:0.2}, {scale: 0.24, repeat: -1, yoyo:true},"stableState")
+// tl.to(animationContainer,{scale:0.5, y:-150,x: 300, duration: 5, ease: "power1.InOut"})

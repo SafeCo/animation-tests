@@ -6,38 +6,54 @@
 body{
     overflow-x: hidden;
     overflow-y: hidden;
-    background-color: black;
+    border: solid yellow 2px;
+    background-color: rgb(58, 12, 58);
+    height: 100vh;
+    width: 100%;
+}
+
+.animation-container{
+    position: relative;
+    border: solid red 3px;
+    width: 500px;
+    height: 500px;
+    left: 50%;
+    top:50%;
+    transform: translate(-50%,-50%);
+    filter: blur(4px);
 }
 
 
 #path-view{
-    border: solid black 1px;
     position: absolute;
     top: 50%;
     left:50%;
     min-width: 200px;
     max-width: 500px;
     transform: translate(-50%, -50%);
+    opacity: 1;
 
 }
 
 
 .orb{
-    transform: scale(0.5);
+    transform: scale(0.4);
     opacity: 1;
-    z-index: 10;
 }
 
 .orb-container{
-    position: absolute;
+    position:absolute;
+    display: flex;
     border: solid black 1px;
     top: -100%;
-    left: -10%;
+    left: -50%;
+   
     
 }
 
 
-.magic{
+
+.centre{
 
     position: absolute;
     top: 50%;
