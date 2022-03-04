@@ -3,12 +3,12 @@ const orbContainer = document.querySelector('.orb-container')
 const path = document.querySelector('#path')
 const magicText = document.querySelector('.magic-text')
 const magicCircle = document.querySelector('.magic-circle')
-
+const blueExplosion = document.querySelector(".blue-explosion")
 let executed = false
 
 const body = document.querySelector('body')
 
-const intro = document.querySelector('.front-end')
+const intro = document.querySelector('.welcome-text')
 
 const whiteBall = document.querySelector('.white-ball')
 const blueBall = document.querySelector('.blue-ball')
@@ -17,7 +17,7 @@ const blueBall = document.querySelector('.blue-ball')
 
 //                                                                  MAGIC ORB
 const tl = gsap.timeline();
-
+tl.set(blueExplosion,{autoAlpha:0});
 tl.set(magicCircle,{autoAlpha:0});
 tl.set(whiteBall, {autoAlpha:0});
 tl.set(blueBall, {autoAlpha:0});
@@ -185,11 +185,19 @@ tl.set(whiteBall, {autoAlpha:1},"<")
   .fromTo(blueBall, {scale:0.2}, {scale: 0.22,duration:1,  repeat: -1, yoyo:true},"<")
 
   //                                                                  MY NAME IS SAIF A FRONTEND WEB DEVLEOPER
+
+
+  textTl.fromTo(blueExplosion, {autoAlpha:1},{autoAlpha:0, scale:2, duration:3})
+        .to(animationContainer,{scale:0.5, y:0,x: 300, duration: 5,filter: "blur(4px)", ease: "power1.InOut"},"<")
+        .to(intro, {autoAlpha:1} ,"<")
+        .to(intro, { y:-100,x:-300,scale:2, ease:"bounce.out", duration: 5} ,"<")
+        .call(spawnHoverText)
+
+  //                                                                  glow
+
+
+
   
 
-  textTl.to(animationContainer,{scale:0.5, y:-150,x: 300, duration: 5, ease: "power1.InOut"})
-        .to(intro, {autoAlpha:1, scale:1} ,"<")
-        .to(intro, { y:-150,x:-600, ease:"bounce.out", duration: 3} ,"<")
+ 
 
-
-// tl.to(animationContainer,{scale:0.5, y:-150,x: 300, duration: 5, ease: "power1.InOut"})

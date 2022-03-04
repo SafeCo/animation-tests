@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   width="137.57292mm"
+   height="137.57294mm"
+   viewBox="0 0 137.57292 137.57294"
+   version="1.1"
+   id="svg8"
+   inkscape:version="1.0.2-2 (e86c870879, 2021-01-15)"
+   sodipodi:docname="Blue Ball.svg">
+  <defs
+     id="defs2">
+    <rect
+       x="62.2738"
+       y="63.877419"
+       width="231.25951"
+       height="10.72551"
+       id="rect896" />
+    <filter
+       inkscape:collect="always"
+       style="color-interpolation-filters:sRGB"
+       id="filter846"
+       x="-0.082767062"
+       width="1.1655341"
+       y="-0.082767062"
+       height="1.1655341">
+      <feGaussianBlur
+         inkscape:collect="always"
+         stdDeviation="4.0705613"
+         id="feGaussianBlur848" />
+    </filter>
+  </defs>
+  <sodipodi:namedview
+     id="base"
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1.0"
+     inkscape:pageopacity="0.0"
+     inkscape:pageshadow="2"
+     inkscape:zoom="0.98994949"
+     inkscape:cx="113.26093"
+     inkscape:cy="350.98008"
+     inkscape:document-units="mm"
+     inkscape:current-layer="layer1"
+     inkscape:document-rotation="0"
+     showgrid="false"
+     fit-margin-top="0"
+     fit-margin-left="0"
+     fit-margin-right="0"
+     fit-margin-bottom="0"
+     inkscape:window-width="1920"
+     inkscape:window-height="986"
+     inkscape:window-x="-11"
+     inkscape:window-y="-11"
+     inkscape:window-maximized="1" />
+  <metadata
+     id="metadata5">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+        <dc:title></dc:title>
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+  <g
+     inkscape:groupmode="layer"
+     id="layer8"
+     inkscape:label="Inner Base Glow"
+     style="display:inline"
+     sodipodi:insensitive="true"
+     transform="translate(-38.524909,-38.524907)">
+    <path
+       id="path835-7-4-6-0"
+       style="display:inline;mix-blend-mode:luminosity;fill:#61bcf5;fill-opacity:1;stroke:#61bcf5;stroke-width:1.96577;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:1.51937;stroke-opacity:1;filter:url(#filter846)"
+       d="M 107.31137,48.294254 A 59.01711,59.017129 0 0 0 48.294256,107.31137 59.01711,59.017129 0 0 0 107.31137,166.32849 59.01711,59.017129 0 0 0 166.32849,107.31137 59.01711,59.017129 0 0 0 107.31137,48.294254 Z" />
+  </g>
+  <g
+     inkscape:groupmode="layer"
+     id="layer1"
+     inkscape:label="Inner Base Line 1"
+     sodipodi:insensitive="true"
+     style="display:inline"
+     transform="translate(-38.524909,-38.524907)">
+    <path
+       id="path835-7-4-6-0-1"
+       style="display:inline;mix-blend-mode:luminosity;fill:#61bcf5;fill-opacity:1;stroke:#3f8fc1;stroke-width:1.80195;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:1.51937;stroke-opacity:1"
+       d="M 107.31137,53.212349 A 54.099013,54.099033 0 0 0 53.212348,107.31137 54.099013,54.099033 0 0 0 107.31137,161.41039 54.099013,54.099033 0 0 0 161.41039,107.31137 54.099013,54.099033 0 0 0 107.31137,53.212349 Z" />
+  </g>
+</svg>
