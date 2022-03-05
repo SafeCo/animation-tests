@@ -64,8 +64,6 @@ body{
     display: flex;
     top: -100%;
     left: -50%;
-   
-    
 }
 
 
@@ -80,4 +78,9 @@ body{
 }
 .magic-text{
     transform: translate(-50%, -50%) scale(0.67);
+}
+
+.about-me-button:hover{
+    filter: contrast(200%);
+    cursor: pointer;
 }
