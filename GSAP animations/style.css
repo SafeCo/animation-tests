@@ -11,6 +11,7 @@ body{
     width: 100%;
 }
 
+
 .animation-container{
     position: relative;
     width: 500px;
@@ -22,7 +23,7 @@ body{
 }
 
 .welcome-text{
-    border: solid blue 2px;
+    /* border: solid blue 2px; */
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -32,7 +33,7 @@ body{
 .front{
     
     
-    border: solid yellow 1px;
+    /* border: solid yellow 1px; */
    
   
 }

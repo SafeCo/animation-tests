@@ -187,15 +187,19 @@ tl.set(whiteBall, {autoAlpha:1},"<")
   //                                                                  MY NAME IS SAIF A FRONTEND WEB DEVLEOPER
 
 
-  textTl.fromTo(blueExplosion, {autoAlpha:1},{autoAlpha:0, scale:2, duration:3})
-        .to(animationContainer,{scale:0.5, y:0,x: 300, duration: 5,filter: "blur(4px)", ease: "power1.InOut"},"<")
-        .to(intro, {autoAlpha:1} ,"<")
-        .to(intro, { y:-100,x:-300,scale:2, ease:"bounce.out", duration: 5} ,"<")
-        .call(spawnHoverText)
+  textTl.set(blueExplosion, {autoAlpha:1})
+        .to(blueExplosion, {scale:10, duration:6},"<")
+        .to(animationContainer,{scale:0.5, y:0,x: 300, duration: 5,filter: "blur(4px)", ease: "power1.InOut"},"<+=1")
+        .to(blueExplosion, {autoAlpha:0, duration:6},"<")
+        .to(intro, {autoAlpha:1} ,"<-=1")
+        .to(intro, { y:-100,x:-300,scale:2, ease:"Power1.InOut", duration: 5} ,"<")
+        .call(testremove)
 
   //                                                                  glow
 
-
+function testremove(){
+  blueExplosion.remove()
+}
 
   
 

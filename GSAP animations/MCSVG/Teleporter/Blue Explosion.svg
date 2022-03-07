@@ -13,7 +13,7 @@
    version="1.1"
    id="svg8"
    inkscape:version="1.0.2-2 (e86c870879, 2021-01-15)"
-   sodipodi:docname="Blue Ball.svg">
+   sodipodi:docname="Blue Explosion.svg">
   <defs
      id="defs2">
     <rect
@@ -47,7 +47,7 @@
      inkscape:cx="113.26093"
      inkscape:cy="350.98008"
      inkscape:document-units="mm"
-     inkscape:current-layer="layer1"
+     inkscape:current-layer="layer8"
      inkscape:document-rotation="0"
      showgrid="false"
      fit-margin-top="0"
@@ -67,7 +67,7 @@
         <dc:format>image/svg+xml</dc:format>
         <dc:type
            rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
-        <dc:title></dc:title>
+        <dc:title />
       </cc:Work>
     </rdf:RDF>
   </metadata>
@@ -76,23 +76,10 @@
      id="layer8"
      inkscape:label="Inner Base Glow"
      style="display:inline"
-     sodipodi:insensitive="true"
      transform="translate(-38.524909,-38.524907)">
     <path
        id="path835-7-4-6-0"
-       style="display:inline;mix-blend-mode:luminosity;fill:#61bcf5;fill-opacity:1;stroke:#61bcf5;stroke-width:1.96577;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:1.51937;stroke-opacity:1;filter:url(#filter846)"
+       style="display:inline;mix-blend-mode:luminosity;fill:#ffffff;fill-opacity:1;stroke:#61bcf5;stroke-width:1.96577;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:1.51937;stroke-opacity:1;filter:url(#filter846)"
        d="M 107.31137,48.294254 A 59.01711,59.017129 0 0 0 48.294256,107.31137 59.01711,59.017129 0 0 0 107.31137,166.32849 59.01711,59.017129 0 0 0 166.32849,107.31137 59.01711,59.017129 0 0 0 107.31137,48.294254 Z" />
-  </g>
-  <g
-     inkscape:groupmode="layer"
-     id="layer1"
-     inkscape:label="Inner Base Line 1"
-     sodipodi:insensitive="true"
-     style="display:inline"
-     transform="translate(-38.524909,-38.524907)">
-    <path
-       id="path835-7-4-6-0-1"
-       style="display:inline;mix-blend-mode:luminosity;fill:#61bcf5;fill-opacity:1;stroke:#3f8fc1;stroke-width:1.80195;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:1.51937;stroke-opacity:1"
-       d="M 107.31137,53.212349 A 54.099013,54.099033 0 0 0 53.212348,107.31137 54.099013,54.099033 0 0 0 107.31137,161.41039 54.099013,54.099033 0 0 0 161.41039,107.31137 54.099013,54.099033 0 0 0 107.31137,53.212349 Z" />
   </g>
 </svg>

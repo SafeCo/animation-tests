@@ -7,9 +7,9 @@
    xmlns="http://www.w3.org/2000/svg"
    xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
    xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
-   width="23.720268mm"
-   height="10.774322mm"
-   viewBox="0 0 23.720269 10.774322"
+   width="24.533785mm"
+   height="8.2704296mm"
+   viewBox="0 0 24.533786 8.27043"
    version="1.1"
    id="svg8"
    inkscape:version="1.0.2-2 (e86c870879, 2021-01-15)"
@@ -19,15 +19,15 @@
     <filter
        inkscape:collect="always"
        style="color-interpolation-filters:sRGB"
-       id="filter1208"
-       x="-0.086917289"
-       width="1.1738346"
-       y="-0.18205892"
-       height="1.3641177">
+       id="filter978"
+       x="-0.082820408"
+       width="1.1656408"
+       y="-0.1734775"
+       height="1.3469549">
       <feGaussianBlur
          inkscape:collect="always"
-         stdDeviation="0.64864054"
-         id="feGaussianBlur1210" />
+         stdDeviation="0.61806663"
+         id="feGaussianBlur980" />
     </filter>
   </defs>
   <sodipodi:namedview
@@ -38,10 +38,10 @@
      inkscape:pageopacity="0.0"
      inkscape:pageshadow="2"
      inkscape:zoom="11.2"
-     inkscape:cx="41.108722"
-     inkscape:cy="14.657384"
+     inkscape:cx="42.646075"
+     inkscape:cy="9.9256196"
      inkscape:document-units="mm"
-     inkscape:current-layer="layer4"
+     inkscape:current-layer="layer3"
      inkscape:document-rotation="0"
      showgrid="false"
      inkscape:window-width="1920"
@@ -61,7 +61,7 @@
         <dc:format>image/svg+xml</dc:format>
         <dc:type
            rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
-        <dc:title></dc:title>
+        <dc:title />
       </cc:Work>
     </rdf:RDF>
   </metadata>
@@ -70,51 +70,53 @@
      id="layer6"
      inkscape:label="Button Fill"
      style="display:inline"
-     sodipodi:insensitive="true"
-     transform="translate(0.11382347,19.744785)">
+     transform="translate(0.52058138,18.492839)"
+     sodipodi:insensitive="true">
     <rect
-       style="fill:#40bf9b;fill-opacity:1;stroke:none;stroke-width:0.613224;stroke-dashoffset:1.51937;stroke-opacity:1;filter:url(#filter1208)"
+       style="opacity:0.414141;fill:#4095bf;fill-opacity:1;stroke:none;stroke-width:0.613224;stroke-dashoffset:1.51937;stroke-opacity:1;filter:url(#filter978)"
        id="rect846-9"
        width="17.910561"
        height="8.5507336"
        x="1.3470292"
        y="-18.591213"
        ry="2.1593862"
-       transform="matrix(1.1282453,0,0,0.923708,0.12277877,-1.1339617)" />
+       transform="matrix(1.1751427,0,0,0.71807801,-0.36037332,-4.0777295)"
+       rx="0" />
   </g>
   <g
      inkscape:groupmode="layer"
      id="layer3"
      inkscape:label="Button Outline"
      style="display:inline"
-     sodipodi:insensitive="true"
-     transform="translate(0.11382347,19.744785)">
+     transform="translate(0.52058138,18.492839)">
     <rect
-       style="fill:none;fill-opacity:1;stroke:#ffffff;stroke-width:0.663885;stroke-dashoffset:1.51937;stroke-opacity:1"
+       style="fill:none;fill-opacity:1;stroke:#ffffff;stroke-width:0.592041;stroke-dashoffset:1.51937;stroke-opacity:1"
        id="rect846"
-       width="21.117247"
-       height="8.5000725"
-       x="1.3723594"
-       y="-18.565884"
-       ry="2.1465924" />
+       width="21.669748"
+       height="6.5875416"
+       x="0.9114365"
+       y="-17.651396"
+       ry="2.5140522"
+       rx="2.3623512" />
   </g>
   <g
      inkscape:groupmode="layer"
      id="layer4"
-     inkscape:label="Button Text Fill"
+     inkscape:label="Button Text "
      style="display:inline"
-     transform="translate(0.11382347,19.744785)">
+     transform="translate(0.52058138,18.492839)"
+     sodipodi:insensitive="true">
     <text
        xml:space="preserve"
-       style="font-size:4.7424px;line-height:0;font-family:Norse;-inkscape-font-specification:Norse;letter-spacing:0.002736px;fill:none;stroke:#ffffff;stroke-width:0.2736;stroke-opacity:1"
-       x="3.7343688"
-       y="-13.391645"
+       style="font-size:3.48765px;line-height:0;font-family:Norse;-inkscape-font-specification:Norse;letter-spacing:0.00201211px;fill:none;stroke:#ffffff;stroke-width:0.201211;stroke-opacity:1"
+       x="5.9159203"
+       y="-13.608955"
        id="text851"
        transform="scale(1.0367617,0.96454181)"><tspan
          sodipodi:role="line"
          id="tspan849"
-         x="3.7343688"
-         y="-13.391645"
-         style="font-size:4.7424px;fill:none;stroke:#ffffff;stroke-width:0.2736;stroke-opacity:1">About me </tspan></text>
+         x="5.9159203"
+         y="-13.608955"
+         style="font-size:3.48765px;fill:none;stroke:#ffffff;stroke-width:0.201211;stroke-opacity:1">About me </tspan></text>
   </g>
 </svg>
