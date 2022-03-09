@@ -4,6 +4,8 @@ const path = document.querySelector('#path')
 const magicText = document.querySelector('.magic-text')
 const magicCircle = document.querySelector('.magic-circle')
 const blueExplosion = document.querySelector(".blue-explosion")
+const aMButton = document.querySelector(".about-me-button")
+
 let executed = false
 
 const body = document.querySelector('body')
@@ -195,11 +197,17 @@ tl.set(whiteBall, {autoAlpha:1},"<")
         .to(intro, { y:-100,x:-300,scale:2, ease:"Power1.InOut", duration: 5} ,"<")
         .call(testremove)
 
-  //                                                                  glow
-
 function testremove(){
   blueExplosion.remove()
 }
+  //                                                                  About Me Button
+
+aMButton.addEventListener("click", function(){
+  console.log("hello")
+  window.location = "./About Me.html"
+})
+
+
 
   
 
