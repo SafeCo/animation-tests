@@ -1,0 +1,46 @@
+*, *:before, *:after{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+body{
+    overflow-x: hidden;
+    overflow-y: hidden;
+    background-color: rgb(58, 12, 58);
+    height: 100vh;
+    width: 100%;
+}
+
+.test{
+    position: relative;
+    border: solid blue 2px;
+    height: 200px;
+    width: 600px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -100%);
+}
+
+
+
+.orb-container{
+    border: solid red 1px;
+    position: relative;
+    display: flex;
+    /* top: -100%;
+    left: -50%; */
+}
+.orb{
+   
+
+    transform: scale(0.4);
+}
+
+.centre{
+
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) scale(0.65);
+    
+}
